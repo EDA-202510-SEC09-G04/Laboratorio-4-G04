@@ -51,11 +51,7 @@ def add_last(my_list,element):
     if len(my_list['elements']) == 0:
         my_list['elements'] = [None]
         
-    if my_list['size'] >= len(my_list['elements']):
-        capacidad = 2 * len(my_list['elements'])
-        elements = [None] * capacidad
-        my_list['elements'] = elements
-    tamanio = size(my_list)
+    tamanio = size(my_list)-1
     my_list['elements'][tamanio] = element
     my_list['size'] += 1
     return my_list 
@@ -152,7 +148,7 @@ def sub_list(my_list, pos_i, num_elements):
     return sublist
 
 def is_empty(my_list):
-    if my_list["size"] == 0:
+    if my_list["size"] == 0 or my_list["size"] == None:
         return True
     else:
         return False
