@@ -1,3 +1,7 @@
+from DataStructures.List import array_list as lt
+
+
+
 def new_stack():
      
    new = {
@@ -28,6 +32,7 @@ def push(my_stack,element):
           my_stack['Last'] = dict_element
      
      my_stack['size'] += 1
+     
      return my_stack
 
 
@@ -38,11 +43,15 @@ def push(my_stack,element):
 def pop(my_stack):
      
      
-     ultimo_el = my_stack['First']
+     ultimo_el = my_stack['First']['info']
+     if my_stack['First'] == None:
+          raise Exception('EmptyStructureError: stack is empty')
      
-     my_stack['First'] = my_stack['First']['next']
-     my_stack['size'] -= 1
-     return ultimo_el
+     else:
+      my_stack['First'] = my_stack['First']['next']
+      my_stack['size'] -= 1
+      
+      return ultimo_el
 
 
 def is_empty(my_stack):
@@ -59,8 +68,12 @@ def is_empty(my_stack):
 
 
 def top(my_stack):
-     
-     return my_stack['First']
+     if my_stack['First'] == None:
+          
+          raise Exception('EmptyStructureError: stack is empty')
+     else:
+          
+      return my_stack['First']['info']
 
 
 def size(my_stack):
