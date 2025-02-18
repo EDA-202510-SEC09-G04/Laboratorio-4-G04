@@ -27,6 +27,7 @@
 import sys
 import App.logic as logic
 
+
 """
 La vista se encarga de la interacción con el usuario
 Presenta el menú de opciones y por cada selección
@@ -63,9 +64,15 @@ def load_data(control):
     return books, authors, tags, book_tags, books_to_read
 
 
-def print_books_to_read(results):
+def print_books_to_read(books_stack):
     # TODO Imprimir los libros por leer
-    pass
+    
+    print("\nLibros por leer: \n")
+    
+    while books_stack['size'] > 0:
+        book = logic.pop(books_stack)
+        print(f"LibroID:{book['book_id']}")
+    
 
 
 def print_tests_results(queue_results, stack_results):

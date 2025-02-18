@@ -120,6 +120,7 @@ def load_books_to_read(catalog):
     input_file = csv.DictReader(open(books_to_read_file,encoding='utf-8'))
     for books in input_file:
         add_book_to_read(catalog,books)
+        
     return books_to_read_size(catalog)
 
 # Funciones de consulta sobre el catálogo
