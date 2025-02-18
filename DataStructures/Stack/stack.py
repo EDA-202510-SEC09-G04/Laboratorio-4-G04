@@ -42,16 +42,14 @@ def push(my_stack,element):
 
 def pop(my_stack):
      
-     
-     ultimo_el = my_stack['First']['info']
-     if my_stack['First'] == None:
-          raise Exception('EmptyStructureError: stack is empty')
-     
-     else:
-      my_stack['First'] = my_stack['First']['next']
-      my_stack['size'] -= 1
-      
-      return ultimo_el
+    if my_stack['First'] == None:
+        raise Exception('EmptyStructureError: stack is empty')
+    
+    ultimo_el = my_stack['First']['info']
+    my_stack['First'] = my_stack['First']['next']
+    my_stack['size'] -= 1
+    
+    return ultimo_el
 
 
 def is_empty(my_stack):
@@ -68,6 +66,7 @@ def is_empty(my_stack):
 
 
 def top(my_stack):
+     
      if my_stack['First'] == None:
           
           raise Exception('EmptyStructureError: stack is empty')

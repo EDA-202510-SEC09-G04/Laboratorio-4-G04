@@ -131,8 +131,10 @@ def get_books_stack_by_user(catalog, user_id):
     """
     books_stack = st.new_stack()
 
-    # TODO Completar la función que retorna los libros por leer de un usuario. Se debe usar el TAD Pila para resolver el requerimiento
-
+    
+    for book_to_read in catalog['books_to_read']: 
+        if book_to_read['user_id'] == user_id:
+            st.push(books_stack, book_to_read['book_id'])
     return books_stack
 
 
@@ -264,8 +266,10 @@ def book_tag_size(catalog):
 
 
 def books_to_read_size(catalog):
-    # TODO Implementar la función que retorna el tamaño de la lista de libros por leer
-    pass
+    
+    return lt.size(catalog["books_to_read"])
+    
+    
 
 # Funciones utilizadas para comparar elementos dentro de una lista
 
