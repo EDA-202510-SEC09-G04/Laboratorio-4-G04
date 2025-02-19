@@ -116,7 +116,7 @@ def load_books_to_read(catalog):
     """
     Carga la información del archivo to_read y los agrega a la lista de libros por leer
     """
-    books_to_read_file = data_dir + '/books_to_read.csv'
+    books_to_read_file = data_dir + '/to_read.csv'
     input_file = csv.DictReader(open(books_to_read_file,encoding='utf-8'))
     for books in input_file:
         add_book_to_read(catalog,books)

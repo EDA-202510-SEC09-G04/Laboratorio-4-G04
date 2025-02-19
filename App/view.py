@@ -90,7 +90,7 @@ def print_tests_results(queue_results, stack_results):
 
     print("\nTiempos de ejecución para Pila: \n")
 
-    # TODO Imprimir los resultados de las pruebas de rendimiento de la pila
+    
     
     
     print("\nTiempos de ejeución para Pila: \n")
