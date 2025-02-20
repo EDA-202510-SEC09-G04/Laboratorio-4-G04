@@ -12,7 +12,7 @@ def get_element(my_list, pos):
     return my_list['elements'][pos]
 
 def is_present(my_list,element, cmp_function):
-    size = my_list["size"]
+    size = len(my_list['elements'])
     if size > 0:
         keyexist = False
         for keypos in range(0,size):
@@ -51,7 +51,7 @@ def add_last(my_list,element):
     if len(my_list['elements']) == 0:
         my_list['elements'] = [None]
         
-    tamanio = size(my_list)-1
+    tamanio = len(my_list['elements'])-1
     my_list['elements'][tamanio] = element
     my_list['size'] += 1
     return my_list 

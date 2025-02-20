@@ -58,7 +58,7 @@ def new_logic():
     catalog['book_tags'] = lt.new_list()
     
     catalog['books_to_read'] = lt.new_list()
-    catalog["book_sublist"] = lt.new_list
+    catalog["book_sublist"] = lt.new_list()
     return catalog
 
 
